@@ -47,7 +47,7 @@ const PersonMediaGrid = ({ personId }) => {
       </Grid>
       {filteredMedias.length < medias.length && (
         <Button onClick={onLoadMore}>
-          Xem theem
+          Xem thêm
         </Button>
       )}
     </>
