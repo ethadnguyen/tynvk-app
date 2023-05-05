@@ -27,7 +27,7 @@ const timeout = 500;
 const MediaSearch = () => {
   const [query, setQuery] = useState("");
   const [onSearch, setOnSearch] = useState(false);
-  const [mediaType, setMediaType] = useState(mediaTypes[0]);
+  const [mediaType, setMediaType] = useState(mediaTypes[0].type);
   const [medias, setMedias] = useState([]);
   const [page, setPage] = useState(1);
 

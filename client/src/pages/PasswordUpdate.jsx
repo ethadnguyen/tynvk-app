@@ -59,7 +59,7 @@ const PasswordUpdate = () => {
 
   return (
     <Box sx={{ ...uiConfigs.style.mainContent }}>
-      <Container header="update password">
+      <Container header="Thay đổi mật khẩu">
         <Box component="form" maxWidth="400px" onSubmit={form.handleSubmit}>
           <Stack spacing={2}>
             <TextField
