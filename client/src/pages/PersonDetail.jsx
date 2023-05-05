@@ -66,7 +66,7 @@ const PersonDetail = () => {
                 </Stack>
               </Box>
             </Box>
-            <Container header="medias">
+            <Container header="Các phim có liên quan">
               <PersonMediaGrid personId={personId} />
             </Container>
           </Box>
