@@ -8,7 +8,7 @@ const signup = async (req, res) => {
 
     const checkUser = await userModel.findOne({ username });
 
-    if (checkUser) return responseHandler.badrequest(res, "username already used");
+    if (checkUser) return responseHandler.badrequest(res, "tên đăng nhập đã được sử dụng");
 
     const user = new userModel();
 
@@ -40,7 +40,7 @@ const signin = async (req, res) => {
 
     const user = await userModel.findOne({ username }).select("username password salt id displayName");
 
-    if (!user) return responseHandler.badrequest(res, "User not exist");
+    if (!user) return responseHandler.badrequest(res, "Tài khoản không tồn tại");
 
     if (!user.validPassword(password)) return responseHandler.badrequest(res, "Sai mật khẩu");
 

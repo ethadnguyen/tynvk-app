@@ -24,17 +24,17 @@ const SignupForm = ({ switchAuthState }) => {
     },
     validationSchema: Yup.object({
       username: Yup.string()
-        .min(8, "Tên đăng nhập có ít nhất 8 kí tự")
+        .min(8, "Tên đăng nhập phải có ít nhất 8 kí tự")
         .required("tên đăng nhập là bắt buộc"),
       password: Yup.string()
-        .min(8, "Mật khẩu có ít nhất 8 kí tự")
+        .min(8, "Mật khẩu phải có ít nhất 8 kí tự")
         .required("Mật khẩu là bắt buộc"),
       displayName: Yup.string()
-        .min(8, "Tên tài khoản")
+        .min(8, "Tên tài khoản phải có ít nhất 8 kí tự")
         .required("Tên tài khoản là bắt buộc"),
       confirmPassword: Yup.string()
         .oneOf([Yup.ref("password")], "Mật khẩu không trùng khớp")
-        .min(8, "Mật khẩu có ít nhất 8 kí tự")
+        .min(8, "Mật khẩu phải có ít nhất 8 kí tự")
         .required("Nhập lại mật khẩu")
     }),
     onSubmit: async values => {
