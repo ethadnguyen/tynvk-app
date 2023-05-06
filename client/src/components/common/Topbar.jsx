@@ -88,8 +88,8 @@ const Topbar = () => {
                 sx={{ color: "inherit" }}
                 onClick={onSwithTheme}
               >
-                {themeMode === themeModes.dark && <DarkModeOutlinedIcon />}
-                {themeMode === themeModes.light && <WbSunnyOutlinedIcon />}
+                {themeMode === themeModes.dark && <WbSunnyOutlinedIcon />}
+                {themeMode === themeModes.light && <DarkModeOutlinedIcon />}
               </IconButton>
             </Box>
             {/* main menu */}

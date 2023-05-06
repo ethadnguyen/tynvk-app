@@ -19,11 +19,11 @@ const Footer = () => {
               Copyright© {new Date().getFullYear()} TYNVK
             </Typography>
           </Box>
-          <Box>
+          <Box >
             {menuConfigs.main.map((item, index) => (
               <Button
                 key={index}
-                sx={{ color: "inherit" }}
+                sx={{ color: "inherit", fontSize: { md: "0.75rem", xs: '0.7rem' } }}
                 component={Link}
                 to={item.path}
               >

@@ -24,7 +24,7 @@ const ReviewItem = ({ review, onRemoved }) => {
 
     if (err) toast.error(err.message);
     if (response) {
-      toast.success("Remove review success");
+      toast.success("Xóa đánh giá thành công");
       onRemoved(review.id);
     }
   };
@@ -40,7 +40,7 @@ const ReviewItem = ({ review, onRemoved }) => {
     }}>
       <Box sx={{ width: { xs: 0, md: "10%" } }}>
         <Link
-          to={routesGen.mediaDetail(review.mediaType, review.mediaid)}
+          to={routesGen.mediaDetail(review.mediaType, review.mediaId)}
           style={{ color: "unset", textDecoration: "none" }}
         >
           <Box sx={{
@@ -56,7 +56,7 @@ const ReviewItem = ({ review, onRemoved }) => {
       }}>
         <Stack spacing={1}>
           <Link
-            to={routesGen.mediaDetail(review.mediaType, review.mediaid)}
+            to={routesGen.mediaDetail(review.mediaType, review.mediaId)}
             style={{ color: "unset", textDecoration: "none" }}
           >
             <Typography
@@ -146,7 +146,7 @@ const ReviewList = () => {
             </Box>
           ))}
           {filteredReviews.length < reviews.length && (
-            <Button onClick={onLoadMore}>load more</Button>
+            <Button onClick={onLoadMore}>Xem thêm</Button>
           )}
         </Stack>
       </Container>
