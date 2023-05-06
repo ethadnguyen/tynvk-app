@@ -26,15 +26,15 @@ const PasswordUpdate = () => {
     },
     validationSchema: Yup.object({
       password: Yup.string()
-        .min(8, "password minimum 8 characters")
-        .required("password is required"),
+        .min(8, "Mật khẩu phải có ít nhất 8 kí tự")
+        .required("Mật khẩu là bắt buộc"),
       newPassword: Yup.string()
-        .min(8, "newPassword minimum 8 characters")
-        .required("newPassword is required"),
+        .min(8, "Mật khẩu phải có ít nhất 8 kí tự")
+        .required("Mật khẩu là bắt buộc"),
       confirmNewPassword: Yup.string()
-        .oneOf([Yup.ref("newPassword")], "confirmNewPassword not match")
-        .min(8, "confirmNewPassword minimum 8 characters")
-        .required("confirmNewPassword is required")
+        .oneOf([Yup.ref("newPassword")], "Mật khẩu không trùng khớp")
+        .min(8, "Mật khẩu phải có ít nhất 8 kí tự")
+        .required("Mật khẩu là bắt buộc")
     }),
     onSubmit: async values => onUpdate(values)
   });
@@ -53,7 +53,7 @@ const PasswordUpdate = () => {
       navigate("/");
       dispatch(setUser(null));
       dispatch(setAuthModalOpen(true));
-      toast.success("Update password success! Please re-login");
+      toast.success("Thay đổi mật khẩu thành công! Hãy đăng nhập lại");
     }
   };
 
